@@ -1,4 +1,12 @@
 import streamlit as st
+import os
+from PIL import image
+
+logo_path="SkillProofAI Tech Education Logo.png"
+
+if os.path.exists(logo_path):
+    logo=image.open(logo_path)
+    st.image(logo,width=220)
 import sqlite3
 from datetime import datetime
 import pandas as pd
