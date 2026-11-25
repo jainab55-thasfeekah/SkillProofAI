@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillProofAI | Skills Beyond Certificates</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f7f8fc;
+  color: #18213a;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: white;
+  box-shadow: 0 2px 15px #00000008;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #6254df;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 25px;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 90px 8%;
+  text-align: center;
+  background: linear-gradient(135deg,#eeeaff,#e9f3ff);
+}
+
+.tag {
+  color: #6254df;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: clamp(36px,6vw,60px);
+  margin: 22px 0;
+}
+
+.hero h1 span {
+  color: #6254df;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  color: #626b80;
+}
+
+.btn {
+  display: inline-block;
+  background: #6254df;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 9px;
+  margin-top: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+section {
+  padding: 65px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px #00000008;
+}
+
+.card h3 {
+  margin: 15px 0;
+}
+
+.card p {
+  color: #697286;
+  line-height: 1.7;
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.assessment {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px #0000000b;
+}
+
+.assessment label {
+  display: block;
+  margin: 17px 0 7px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.result {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #eeecff;
+  line-height: 1.8;
+}
+
+footer {
+  text-align: center;
+  background: #18213a;
+  color: white;
+  padding: 30px;
+}
+
+@media(max-width:600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav a {
+    margin: 0 7px;
+    font-size: 13px;
+  }
+  .hero {
+    padding: 65px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SkillProofAI.</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#assessment">Assessment</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="tag">THE FUTURE OF SKILL VERIFICATION</div>
+  <h1>Skills Beyond <span>Certificates.</span></h1>
+  <p>
+    Discover your real potential with SkillProofAI.
+    Demonstrate practical abilities, evaluate your performance
+    and build a profile that proves what you can actually do.
+  </p>
+  <a href="#assessment" class="btn">Explore Skill Assessment →</a>
+</div>
+
+<section id="features">
+  <div class="section-title">
+    <h2>What Makes Us Different?</h2>
+    <p>Moving from traditional certificates to practical skill proof.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>AI Skill Analysis</h3>
+      <p>Analyse student performance and identify skill strengths and improvement areas.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Practical Challenges</h3>
+      <p>Demonstrate your knowledge through real-world tasks and problem-solving activities.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Performance Tracking</h3>
+      <p>Track assessment scores and monitor your learning progress.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏆</div>
+      <h3>Skill Portfolio</h3>
+      <p>Build a digital profile showcasing your demonstrated abilities.</p>
+    </div>
+  </div>
+</section>
+
+<section id="assessment">
+  <div class="section-title">
+    <h2>Try Your First Skill Assessment</h2>
+    <p>A simple demonstration of our proposed assessment system.</p>
+  </div>
+
+  <div class="assessment">
+    <form id="skillForm">
+      <label>Student Name</label>
+      <input id="student" type="text" placeholder="Enter your name" required>
+
+      <label>Select Your Skill</label>
+      <select id="skill">
+        <option value="Programming">Programming</option>
+        <option value="Problem Solving">Problem Solving</option>
+        <option value="Communication">Communication</option>
+        <option value="AI and ML">AI and ML</option>
+      </select>
+
+      <label>How confident are you in this skill?</label>
+      <select id="level">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+
+      <button class="btn" type="submit">Generate Demo Profile</button>
+    </form>
+
+    <div class="result" id="result"></div>
+  </div>
+</section>
+
+<footer>
+  <h3>SkillProofAI</h3>
+  <p>Turning Skills Into Proof.</p>
+  <p>© 2026 SkillProofAI | Innovation Project</p>
+</footer>
+
+<script>
+document.getElementById("skillForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("student").value.trim();
+  const skill = document.getElementById("skill").value;
+  const level = document.getElementById("level").value;
+
+  const result = document.getElementById("result");
+
+  result.style.display = "block";
+  result.innerHTML = `
+    <h3>🎉 Demo Skill Profile</h3>
+    <p><strong>Student:</strong> ${escapeHTML(name)}</p>
+    <p><strong>Selected Skill:</strong> ${skill}</p>
+    <p><strong>Self-reported Level:</strong> ${level}</p>
+    <p><strong>Status:</strong> Profile created successfully!</p>
+    <small>This is a demonstration profile, not an AI-verified assessment.</small>
+  `;
+});
+
+function escapeHTML(value) {
+  return value.replace(/[&<>"']/g, function(char) {
+    return {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    }[char];
+  });
+}
+</script>
+
+</body>
+</html>
